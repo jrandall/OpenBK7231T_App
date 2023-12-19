@@ -12,6 +12,7 @@
 #include "drv_test_drivers.h"
 #include "drv_tuyaMCU.h"
 #include "drv_uart.h"
+#include "drv_ws2812b_uart_inv.h"
 
 const char* sensor_mqttNames[OBK_NUM_MEASUREMENTS] = {
 	"voltage",
@@ -174,6 +175,11 @@ static driver_t g_drivers[] = {
 	//drvdetail:"descr":"SM16703P is an individually addressable LEDs controller like WS2812B. Currently SM16703P LEDs are supported through hardware SPI, LEDs data should be connected to P16 (MOSI), [here you can read](https://www.elektroda.com/rtvforum/topic4005865.html) how to break it out on CB2S.",
 	//drvdetail:"requires":""}
 	{ "SM16703P",	SM16703P_Init,		NULL,						NULL, NULL, NULL, NULL, false },
+	//drvdetail:{"name":"WS2812B_UART_Inv_Init",
+	//drvdetail:"title":"TODO",
+	//drvdetail:"descr":"WS2812B is an individually addressable LEDs controller. These strips, or compatible ones, are sometimes connected to the Beken module's UART tranmit pin with an external inverter so that start and stop bits can be used to encode the WS2812B one-wire signalling protocol. The intent of this driver is to permit existing modules to be used without re-wiring, and it controls the LEDs via UART - the LED data line should be connected buffered by an inverter to TX2.",
+	//drvdetail:"requires":""}
+	{ "WS2812B_UART_Inv",	WS2812B_UART_Inv_Init,		NULL,						NULL, WS2812B_UART_Inv_RunQuickTick, NULL, NULL, false },
 #endif
 	//drvdetail:{"name":"IR",
 	//drvdetail:"title":"TODO",
