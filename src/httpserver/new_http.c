@@ -431,6 +431,7 @@ const char* htmlPinRoleNames[] = {
 	"AlwaysLow",
 	"UCS1912_DIN",
 	"SM16703P_DIN",
+	"WS2812B_DIN",
 	"Btn_NextTemperature",
 	"Btn_NextTemperature_n",
 	"Btn_ScriptOnly",

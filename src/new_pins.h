@@ -271,6 +271,13 @@ typedef enum ioRole_e {
 	//iodetail:"file":"new_pins.h",
 	//iodetail:"driver":""}
 	IOR_SM16703P_DIN,
+	//iodetail:{"name":"WS2812B_DIN",
+	//iodetail:"title":"TODO",
+	//iodetail:"descr":"WS2812B compatible LED string digital input",
+	//iodetail:"enum":"IOR_WS2812B_DIN",
+	//iodetail:"file":"new_pins.h",
+	//iodetail:"driver":""}
+	IOR_WS2812B_DIN,
 	//iodetail:{"name":"Button_NextTemperature",
 	//iodetail:"title":"TODO",
 	//iodetail:"descr":"Button that automatically allows you to control temperature of your LED device",
